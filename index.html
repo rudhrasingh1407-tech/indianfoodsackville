@@ -7,12 +7,14 @@
   <style>
     body {
       margin: 0;
+      padding-top: 40px; /* Fix: adds space so top never cuts */
       background: linear-gradient(135deg, #0a1a33, #102a4d);
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      align-items: flex-start; /* Fix: start lower on page */
+      min-height: 100vh;
       font-family: Arial, sans-serif;
+      box-sizing: border-box;
     }
     .card {
       padding: 20px;
@@ -20,6 +22,7 @@
       border-radius: 16px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.4);
       backdrop-filter: blur(6px);
+      margin-bottom: 40px; /* space underneath */
     }
     img {
       max-width: 100%;
